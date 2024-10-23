@@ -8,6 +8,8 @@ import com.vedruna.alumnos.persistance.model.Alumno;
 
 public interface AlumnoRepositoryI extends JpaRepository<Alumno, Integer> {
 
-    Alumno findByNombre(String nombre);
+    List<Alumno> findAll();
+    List<Alumno> findByNombre(String nombre);
+    Alumno findById(int id);
     void deleteById(int id);
 }

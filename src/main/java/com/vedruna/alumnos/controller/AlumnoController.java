@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vedruna.alumnos.persistance.model.Alumno;
+import com.vedruna.alumnos.DTO.AlumnoDTO;
+import com.vedruna.alumnos.DTO.CreateAlumnoDTO;
 import com.vedruna.alumnos.services.AlumnoServiceI;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @CrossOrigin(origins = "*")
@@ -26,7 +27,7 @@ public class AlumnoController {
     private AlumnoServiceI alumnoService;
 
     @GetMapping
-    public List<Alumno> getAlumnos() { // getAlumnos
+    public List<AlumnoDTO> getAlumnos() { // getAlumnos
        try{
                return alumnoService.findAllAlumnos();
        } catch (Exception e) {
@@ -35,7 +36,7 @@ public class AlumnoController {
     }
     
     @GetMapping("/nombre/{name}")
-    public Alumno getAlumnoByName(@PathVariable String name) {
+    public List<AlumnoDTO> getAlumnoByName(@PathVariable String name) {
        try{
             return alumnoService.findAlumnoByName(name);
        } catch (Exception e) {
@@ -44,7 +45,7 @@ public class AlumnoController {
     }
     
     @PostMapping("/insert")
-    public String addAlumno(@RequestBody Alumno nuevoAlumno){
+    public String addAlumno(@RequestBody CreateAlumnoDTO nuevoAlumno){
         try{
             alumnoService.saveAlumno(nuevoAlumno);
             return "Alumno insertado";
@@ -55,7 +56,6 @@ public class AlumnoController {
 
     @DeleteMapping("/delete/{id}")
     public String deleteAlumno(@PathVariable int id){
-
         try{
         alumnoService.deleteAlumnoById(id);
         return "Alumno eliminado";

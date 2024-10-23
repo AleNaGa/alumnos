@@ -1,0 +1,93 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "AlumnosCol",
+    "collectionId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+    "dateExported": "2024-10-23T18:04:54.975Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c65a240c-7323-4176-9c01-6d6d149a33eb",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "FinAll",
+            "url": "localhost:8080/api/v1/alumnos",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-23T17:34:25.823Z",
+            "modified": "2024-10-23T17:34:38.926Z",
+            "headers": []
+        },
+        {
+            "_id": "089e898d-463a-40cc-8d51-9c925831c77f",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "FindByName",
+            "url": "localhost:8080/api/v1/alumnos/nombre/name",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-23T17:35:12.999Z",
+            "modified": "2024-10-23T18:03:47.470Z",
+            "headers": []
+        },
+        {
+            "_id": "d03830e6-950b-4e23-bb8b-b11164fe5f50",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "insert",
+            "url": "localhost:8080/api/v1/alumnos/insert",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-10-23T17:35:36.487Z",
+            "modified": "2024-10-23T17:59:18.280Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"\",\n  \"apellidos\": \"\",\n  \"infoContacto\":{\n      \"direccion\":\"\",\n      \"Telefono\": 0\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "49c19b20-1ba4-4a5b-be5f-18c0fa951b10",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "insertInfoCon",
+            "url": "localhost:8080/api/v1/infocontacto/insert",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-10-23T17:56:23.446Z",
+            "modified": "2024-10-23T17:58:47.153Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"direccion\":\"\",\n    \"Telefono\": 0,\n    \"idAlumno\": 0\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0b671423-4d03-41f7-99b3-4963413ff950",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "Delete",
+            "url": "localhost:8080/api/v1/alumnos/delete/0",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-10-23T17:59:23.410Z",
+            "modified": "2024-10-23T18:04:48.353Z",
+            "headers": []
+        },
+        {
+            "_id": "026fd00c-e45c-4e12-afbd-b82cbbebd4c1",
+            "colId": "4de06403-2b55-49b6-a577-0993e8e9f724",
+            "containerId": "",
+            "name": "DatosContactoGet",
+            "url": "localhost:8080/api/v1/infocontacto/nombre/name",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-10-23T18:01:37.522Z",
+            "modified": "2024-10-23T18:04:21.778Z",
+            "headers": []
+        }
+    ],
+    "ref": "Vw96ADY_cs7fQjy79JbgUeOR4XAb10ttbgqG1KGPeURW9GAGDmQLy-XeMDjRpNbZwW0-CvRLVHKCVn1cGSovoQ"
+}
